@@ -1,0 +1,19 @@
+BRACE EXPANSION
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Brace expansion is a mechanism by which arbitrary strings may be generated, for commands that will take multiple arguements.
+ -  For the below examples, the first example is equivalent to the second command:
+ 
+ 
+ 	$ mkdir /var/log/{auth,syslog,dmesg}_log
+	$ mkdir /var/log/auth_log /var/log/syslog_log /var/log/dmesg_log
+	
+	
+	
+
+
+
+
+
+
