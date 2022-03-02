@@ -1,0 +1,69 @@
+BASH DAY 1
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+** GIT LINKS **
+
+https://git.cybbh.space/programming/bash/public/-/tree/master/
+https://git.cybbh.space/programming/bash/public/-/tree/master/Black_Board_activites 
+https://git.cybbh.space/programming/bash/public/-/blob/master/Day_1_Student_Cheat_Sheet.adoc
+https://git.cybbh.space/programming/bash/public/-/blob/master/Day_3_student_cheat_sheet.adoc
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+** ONLINE RESOURCES **
+
+https://google.com/
+https://linux.die.net/man
+https://serverfault.com/
+https://ss64.com/bash
+https://stackoverflow.com/
+https://tldp.org/LDP/abs/html/index.html
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ACTIVITIES:
+
+- 20 activities to accomplish
+- reply in slack thread with completed activities so Gunny Gerwing is tracking
+- cd
+- make sure you are in the '/home/student' directory when creating directories and files
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+GOOGLE 101
+
+
+using logical operators in google to refine your search queries and locate the information you are looking for easier/more efficiently
+google advanced operators
+
+https://ahrefs.com/blog/google-advanced-search-operators/
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+DAY 1 NOTES
+  man [what_to_man]
+  
+  ** man is your best friend for learning more about how to use different commands **
+  MAN COMMANDS
+    esc : escape character such as with vim
+    /       :     search
+    q       :     quit
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
