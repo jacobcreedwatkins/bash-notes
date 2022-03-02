@@ -20,6 +20,7 @@ https://serverfault.com/
 https://ss64.com/bash
 https://stackoverflow.com/
 https://tldp.org/LDP/abs/html/index.html
+https://explainshell.com/#
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 ACTIVITIES:
@@ -48,13 +49,14 @@ double tap [ tab ] to display possible options
 double tap [  tab ] after a space to display actual options to use
 
 
-history               :     shows history of commands
-<tab><tab>            :     shows possible options
-<tab><tab><space>     :     shows actual options available
-!<history line_number>    :     rerun commands from history
-<ctrl+r pattern>    :     cycles through history in reverse. ctrl+r to keep cycling
-
-
+history               		:     shows history of commands
+<tab><tab>            		:     shows possible options
+<tab><tab><space>     		:     shows actual options available
+!<history line_number>    	:     rerun commands from history
+<ctrl+r pattern>    		:     cycles through history in reverse. 	ctrl+r to keep cycling.		comments can be cycled through.	
+cd .						:		current directory
+cd ..						:		previous directory (goes back 1 directory)
+cd ../..					:		goes back 2 directories
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 DAY 1 NOTES
@@ -65,14 +67,63 @@ DAY 1 NOTES
     esc : escape character such as with vim
     /       :     search
     q       :     quit
-    
-    
-    
-    
-    
-    
-    
-    
+	
+	
+	
+	
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+BASIC BASH SYNTAX
+
+#		:		comments out
+$		: 		sets variable
+>		:		overwrites
+>>		:		appends
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+GUNNY's TRICKS
+
+Get back to home directory:
+	cd
+	cd ~
+	cd $HOME
+	mkdir - p			:		-p option switch forces creation 
+Switch between last two directory paths easier:
+	cd -
+	
+Perfrom as root:
+
+	sudo !!
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+FILE MANIPULATION COMMANDS:
+
+
+curl cht.sh/<command>			:			provides an example syntax for command
+	
+	^^ 'curl for the gurls'
+
+
+
+touch	:	creates files, manipulates timestamps	
+mkdir	:	creates a directory
+rm		:	remove a file
+rmdir	:	remove a file
+rm -rf	:	removes recursively and forcefully
+ls		:	lists contents of a directory
+ls -a	:	lists all (including hidden files, prefixed by a '.')
+pwd		:	print working directory
+cp		:	copies files
+mv		:	moves or renames files
+less	:	prints output to screen in small chunks that can be paged through.		has /	pattern search functionality
+more	:	prints output to screen in one large chunk
+
+
+
+
+
+
     
     
     
