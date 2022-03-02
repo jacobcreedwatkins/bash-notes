@@ -85,6 +85,12 @@ $		: 		sets variable
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 GUNNY's TRICKS
 
+ELF = linux executable
+
+Case sensitivity is IMPORTANT in linux.
+"Linux is a ruthless bitch."
+		- Gunny Gerwing
+
 Get back to home directory:
 	cd
 	cd ~
@@ -96,6 +102,11 @@ Switch between last two directory paths easier:
 Perfrom as root:
 
 	sudo !!
+	
+	
+	
+	
+{} \; 		-> means to take the input {} and the \; specifies to stop the exec. SUPER IMPORTANT!!!!!!!
 	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 FILE MANIPULATION COMMANDS:
@@ -119,9 +130,58 @@ cp		:	copies files
 mv		:	moves or renames files
 less	:	prints output to screen in small chunks that can be paged through.		has /	pattern search functionality
 more	:	prints output to screen in one large chunk
+ln	:	creates symbolic links
+file	:	returns file type (
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+BASIC UNIX COMMANDS
+
+	** FIND COMMANDS **
+	
+		locate	:	locates files by name				#make sure you include a 'sudo updatedb' to update the database after using locate
+		find	:	searches for files in a directory hierarchy
+			find PATH [OPTIONS]
+			
+			find . [OPTIONS] 		(find within present working directory)
+			find / [OPTIONS]		(find starting at root of file system)
+		 	find -name		(denotes case-sensitive file)
+ 			find -iname 		(denotes case-insensitive file)
+
+		
+			
+			
+		grep	:	locates STRINGS within files
+			grep (basic)
+			grep -E or egrep
+			grep -P
+			ps -elf | egrep -B1 "ssh"
+					-A (after)
+					-C (before and after)
+				would search for instances of string "ssh" in ps -elf and also the context of the line before it(B1 = before, 1 line)
+			
+			egrep "PATTERN" filename
+			egrep "PATTERN|OTHERPATTERN" (uses a logical 'or)
+			
+			
+			
+			
+			
+		which	:	shows where a command is stored
+		whereis	:	shows where a command is stored (with man page location)
+		whatis	:	provides synopsis of man page
 
 
 
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Symbolic Links
+
+Soft links are more like desktop shortcuts in windows.
+
+Hard links are like real copies of files that point to the same locations in memory. 
 
 
 
