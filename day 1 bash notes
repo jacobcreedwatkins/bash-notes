@@ -38,6 +38,24 @@ google advanced operators
 
 https://ahrefs.com/blog/google-advanced-search-operators/
 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+LINUX SHORTCUTS
+
+
+
+double tap [ tab ] to display possible options
+double tap [  tab ] after a space to display actual options to use
+
+
+history               :     shows history of commands
+<tab><tab>            :     shows possible options
+<tab><tab><space>     :     shows actual options available
+!<history line_number>    :     rerun commands from history
+<ctrl+r pattern>    :     cycles through history in reverse. ctrl+r to keep cycling
+
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 DAY 1 NOTES
   man [what_to_man]
@@ -47,6 +65,7 @@ DAY 1 NOTES
     esc : escape character such as with vim
     /       :     search
     q       :     quit
+    
     
     
     
