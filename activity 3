@@ -1,0 +1,23 @@
+ACTIVITY 3 // FIND COMMAND EXTENDED
+
+
+
+** review printf format **
+
+#-------------------[ 3 ]-----------------#
+
+
+First find some information on where to start. You know you will need to use -printf format, so search for some info on how to use it.
+    man find | egrep -A175 "^\s+\-printf format"
+    man find | egrep empty
+    
+    
+    
+    FINAL COMMAND ANSWER:
+    
+        find /lib -empty -printf '%i %f\n'
+
+
+
+
+
