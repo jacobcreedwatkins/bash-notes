@@ -1,0 +1,64 @@
+ACTIVITY % // CUT DELIMITATION
+
+
+
+
+
+Using only the "ls -l" and "cut" Commands, write a BASH script that shows all filenames with extensions ie: 1.txt, etc., but no directories,
+in $HOME/CUT.
+Write those to a text file called "names" in $HOME/CUT directory.
+Omit the "names" filename from your output.
+NOTE: The output should only be the file names with no additional information.
+
+
+
+
+
+
+#-------------------[ 5 ]--------------------#
+
+  ls -l | cut -d. -f1-
+  ls -l | cut -d. -f1- -s
+  ls -l | cut -d. -f1- -s 
+  ls -l | cut -d. -f1- -s | cut -d: -f2
+  ls -l | cut -d. -f1- -s | cut -d: -f2 
+  ls -l | cut -d. -f1- -s | cut -d: -f2 | cut -d' ' -f2
+  ls -l | cut -d. -f1- -s | cut -d: -f2 | cut -d' ' -f2 > names
+  
+  
+  
+  
+  
+  ==============================================================================
+  
+  
+  
+  
+  #--------------[  NOTES ]----------------------#
+  cut -d.    >>  delimits on the '.' since you are trying to the filenames WITH their extensions
+  
+  
+  
+  -f1-      >> indicates to start at field 1 (the first field with the found instance), and the '-' indicates to keep going until there are no more fields
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
