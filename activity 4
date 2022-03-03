@@ -1,0 +1,19 @@
+ACTIVITY 4 // FIND COMMAND EXTENDED
+
+Using ONLY the "find" command, find all files on the system with inode 999 and print only the filename to the
+screen, not the absolute path to the file, separating each filename with a newline. Ensure unneeded output is not visible.
+
+
+
+
+
+#---------------------------[ 4 ]--------------------------------#
+
+
+
+
+find / -type f -inum 999 -printf '%i %f\n' 2>/dev/null
+
+
+
+
