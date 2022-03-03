@@ -104,6 +104,12 @@ Perfrom as root:
 	sudo !!
 	
 	
+Executing and using printf (REVIEW THIS)
+
+	-exec
+	-printf
+	
+	
 	
 	
 {} \; 		-> means to take the input {} and the \; specifies to stop the exec. SUPER IMPORTANT!!!!!!!
