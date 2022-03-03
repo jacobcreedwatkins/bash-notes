@@ -1,0 +1,93 @@
+#----------------[  DAY 2 ]---------------#
+
+
+
+'awk' command is functionally very similar to the 'cut' command.
+Awk is mostly used for pattern scanning and processing. It searches one or more files to see if they contain lines that matches with the specified patterns,
+and then perform the associated actions. Awk is abbreviated from the names of the developers – Aho, Weinberger, and Kernighan.
+
+
+
+
+awk -F      >> indicates field seperator (like -d for delimiter in 'cut')
+
+
+awk -F:   >>    would field seperate on :
+
+
+*** awk by default, with no options uses ' ' or space as its field seperator ***
+
+
+Example syntax:
+        awk -F: '{print $1}'         displays 1st field delimited by a ":"
+        awk '{print $2}'             displays 2nd field, delimited automatically by space
+        awk '{print $0}'             displays all string data that matches
+		
+
+        
+Terminal Examples:
+
+	>>>	cat /etc/passwd
+	
+		root:x:0:0:root:/root:/bin/bash
+		daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+		bin:x:2:2:bin:/bin:/usr/sbin/nologin
+		sys:x:3:3:sys:/dev:/usr/sbin/nologin
+		sync:x:4:65534:sync:/bin:/bin/sync
+	
+	>>>	cat /etc/passwd | head -n5 | awk -F: '{print "User="$1,"UID="$3,"GID="$4}'
+	
+		User=root UID=0 GID=0
+		User=daemon UID=1 GID=1
+		User=bin UID=2 GID=2
+		User=sys UID=3 GID=3
+		User=sync UID=4 GID=65534
+===========================================================================================================================================================		
+		
+sort command:
+
+
+		sort -t		>>		the -t specifies delimiter
+
+		sort -t		>>		would delimit on colons
+
+		sort -t: -k3 -n		>>		-k3 specifies that it is sorting on field 3, -t 
+		
+		
+===========================================================================================================================================================	
+		
+uniq command:
+
+
+
+brother command of sort. often used in conjunction with it
+
+
+===========================================================================================================================================================
+SETTING VARIABLES
+
+
+list=$(COMMAND)
+list=$(ls)
+OUTPUT=$(ls -lisa)
+
+echo "OUTPUT"
+
+		double quotes keeps the formatting of what it is set to 
+
+
+
+===========================================================================================================================================================
+	
+	
+	
+	#--------------------[	SED	]--------------------#
+	
+	sed '/PATTERN/REPLACE_WITH/' <FILENAME>
+
+
+
+
+
+        
+     
