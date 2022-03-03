@@ -1,4 +1,3 @@
-egrep  "([0-9]{1,3}\.){3}[0-9]{1,3}" Story_HiddenIPs
-
+egrep -oh "([0-9]{1,3}\.){3}[0-9]{1,3}" Story_HiddenIPs | sort -u | uniq -c
 
 
