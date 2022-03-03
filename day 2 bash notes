@@ -9,13 +9,17 @@ ps, kill, killall				:	more practice
 cut						:	more practice
 command chaining operations			:	more practice
 output rediriection				:	more practice
-#------------------[ END ]-----------------------#
+
+
+================================================================================================================================
 
 
 #---------------[  What if you're stuck/do not know where to start?  ]-------------------#
+
 - Gain situational awareness of the command using 			(	man -k	)
 - curl cht.sh/<command>
 
+====================================================================================================================================
 
 
 #-------------[	COMMAND CHAINING OPERATORS	]------------------#
@@ -31,7 +35,7 @@ output rediriection				:	more practice
 ()		:	precedence operator						(REVIEW THIS)
 
 
-
+====================================================================================================================================
 
 #-------------[	CUT	]-----------------#
 
@@ -50,9 +54,10 @@ cut -f3             		displays only the 3rd field delimited by space
 cut -f2-4           		displays only fields 2 through 4 delimited by space
 cut -c3-10          		displays only the 3rd through 10th characters of each line
 
+cut -d<delimiter>	-f<row numbers to include>
 
 
-
+==================================================================================================================================
 
 
 
