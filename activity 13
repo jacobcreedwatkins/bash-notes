@@ -1,0 +1,20 @@
+find /bin -executable | sort -u
+
+
+find /bin -executable | sort -u | uniq -c
+
+
+
+
+#------------------------[	MY ANSWERS/MY SCRIPT	]---------------------------#
+
+
+
+  1 #!/bin/bash
+  2 foundLib=$(find {/bin,/sbin,/usr/bin,/usr/sbin} -executable | sort -u | uniq -c | head     -n10 | tail -n1)
+  3 
+  4 md5sum $foundLib > /home/student/scripts/activity_13/foundLibMD5.txt
+  5 
+  6 cat /home/student/scripts/activity_13/foundLibMD5.txt
+  
+  =============================================================================================================================================
