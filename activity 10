@@ -1,0 +1,38 @@
+Activity:
+Using ONLY sed, write all lines from /etc/passwd into $HOME/PASS/passwd.txt that do not end with either /bin/sh or /bin/false.
+
+
+Tip: when designating a path in a sed command, you must escape the path characters if they are to be interpreted as part of the string,
+
+
+
+sed '/\/bin/d' file.txt
+
+
+
+=================================================================================================================================================================
+
+
+
+
+#---------------[	ANSWER SYNTAX	]------------------#
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+first perform the following to see what shells actually are in there:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+egrep "/bin/false|/bin/sh|/bin/bash" /etc/passwd
+
+~~~~~
+then:
+~~~~~
+
+
+
+egrep "/bin/false|/bin/sh|/bin/bash" /etc/passwd | sed "/\/bin\/false/d;/\/bin\/sh/d"
+
+
