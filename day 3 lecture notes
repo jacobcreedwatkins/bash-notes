@@ -1,0 +1,33 @@
+#-------------[DAY 3 LECTURE]-------------------#
+
+
+day 3 lecture highlights
+
+			>	bash parameters	(variables)
+			>	special parameters (built_in_variables)
+			>	functions (layout, examples, etc.)
+			>	Variable Substitution
+			> EOF
+================================================================================================================================================
+
+
+#---------------------[ BASH PARAMETERS]-------------------#
+
+Parameters = entity storing a value
+Variable = parameter with a name
+
+All variables are parameters, but not all parameters are variables.
+
+  examples:
+      var_a="Hello World"         :       var_a="Hello World"
+      anotehr_var=42              :       another_var=42
+      var_a= "Hello World"         :       error
+      var_a = "Hello World"       :       error
+      var_a ="Hello World"        :       error
+      
+      
+            **  note that a space on any side of the equals sign would return an error. NO SPACES WHEN DECLARING VARIABLES!!  **
+            
+         
+jj
+
