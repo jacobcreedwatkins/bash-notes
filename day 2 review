@@ -1,0 +1,20 @@
+#----------------[	DAY 2	]------------------#
+
+awk
+sort,uniq
+conditionals			(review this)
+if statements			(review this)
+aliases					
+sed						(review this)
+==============================================================
+
+
+cat > day3.del << EOF
+
+##cat'ing nothing as standard output to day3.del ; EOF means that once the script reads EOF, it will END the script
+			>	day 3 lecture
+			>	bash parameters	(variables)
+			>	special parameters (built_in_variables)
+			>	functions (layout, examples, etc.)
+			>	Variable Substitution
+			> EOF
