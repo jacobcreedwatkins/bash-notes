@@ -36,3 +36,17 @@ then:
 egrep "/bin/false|/bin/sh|/bin/bash" /etc/passwd | sed "/\/bin\/false/d;/\/bin\/sh/d"
 
 
+#----------[  SED NOTE EXAMPLES ]---------#
+
+
+ sed 's/FIND/REPLACE/g' <file>
+ 
+ sed '/FIND/d' <file>
+ 
+ /\/bin\/false/d;
+ /\/bin\/sh/d 
+ 
+ sed '/\/bin\/false/d;/\/bin\/sh/d" /etc/passwd
+==========================================================================================
+
+
