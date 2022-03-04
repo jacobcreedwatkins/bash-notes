@@ -28,6 +28,78 @@ All variables are parameters, but not all parameters are variables.
       
             **  note that a space on any side of the equals sign would return an error. NO SPACES WHEN DECLARING VARIABLES!!  **
             
-         
-jj
+	    
+	    
+#-----------------------[	SPECIAL PARAMETERS	]--------------------#
+
+The shell treats several parameters specially. These parameters may only be referenced; assignment to them is not allowed.
+
+source <script> 	and		<file>.script		are both used to run scripts INTERACTIVELY, as opposed to how scripts are typically ran non-interactively.
+
+
+		special parameter examples:
+				
+				see day 3 cheat sheet
+				
+				
+				https://git.cybbh.space/programming/bash/public/-/blob/master/Day_3_student_cheat_sheet.adoc
+				
+				
+				
+=================================================================================================================================================================
+
+
+#-----------------[	FUNCTIONS	]--------------#
+
+
+		example test function:
+#!/bin/bash
+
+function do_stuff() {
+    date
+    ls  
+    cat $HOME/file1
+    echo All done - time to go home.
+    date
+}
+
+do_stuff
+
+		~~~~~~
+		OUTPUT
+		~~~~~~
+
+Fri Mar  4 16:00:00 UTC 2022
+test_function_script.sh
+Oorah Marine Corps!
+All done - time to go home.
+Fri Mar  4 16:00:00 UTC 2022
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
