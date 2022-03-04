@@ -1,0 +1,10 @@
+https://stackoverflow.com/questions/22727107/how-to-find-the-last-field-using-cut
+
+
+
+#------------------[  SCRIPT  ]------------------#
+
+
+find / -name *.bin 2> /dev/null | awk 'BEGIN{FS=OFS="."}{NF--; print}' | sort -u
+
+===================================================================================================================================
