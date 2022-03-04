@@ -1,10 +1,41 @@
-https://git.cybbh.space/programming/bash/public/-/blob/master/Black_Board_activites/Activity_9/Activity_9.adoc
+activity 9 link:
+
+      https://git.cybbh.space/programming/bash/public/-/blob/master/Black_Board_activites/Activity_9/Activity_9.adoc
 
 
 
 #----------------[	ACTIVITY 9	]-----------------#
 
+man openssl-passwd
+
+openssl passwd -1 -salt bad4u Password1234
+
+HASHED=$(openssl passwd -1 -salt bad4u Password1234)
+
+echo $HASHED
+
+cat shadow.txt | sed"s|:\*:|:${HASHED}:|;s|:\!:|:${HASHED}:|;s|:\$6[^:]*:|:${HASHED}|"
+
+
+
+~~
+OR
+~~
+
+awk -F: '{OFS=":"}{print $1,$2}' shadow.txt | egrep "\*" | sed "s|:\*:||
+
+
+awk -F: '{OFS=":"}{print $1,$2,$3}' shadow.txt | egrep "\$6" #| sed "s|:\$6[^:]*:|:${HASHED}:|"
 
 
 
 
+#-------[ BASIC SED for REPLACEMENT ]-------------#
+
+
+sed 's/FIND/REPLACE/g'
+
+'g' indicates global
+
+
+===========================================================================================================================================================
