@@ -4,6 +4,17 @@
 
 
 
+#1/bin/bash
+
+sshDir=/home/student/.ssh
+
+if test -d ${sshDir} 
+then
+    echo "File path exists"
+else
+    echo "File path does not exist"
+
+fi
 
 
 
