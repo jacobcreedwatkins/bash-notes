@@ -234,13 +234,46 @@ function q6()
 #-------------------------------------------------------------------------[	QUESTION 7	]---------------------------------------------------------------------#
 
 
+#ifdef SUPPRESS_Q7--DO NOT MODIFY
+# q7
+#   Create a script that will perform the following actions:
+#     1. Read the file specified by "filename" and perform an action based on 
+#        the contents of the file
+#     2. If the contents of the file are 0 to 9, inclusive, print 
+#        "single digit" to standard output.
+#     3. If the contents of the file are 10 to 99, inclusive, print 
+#        "double digit" to standard output.
+#     4. If the contents of the file are 100 to 999, inclusive, print 
+#        "triple digit" to standard output.
+#     5. If the contents of the file are not 0 to 999, inclusive, print 
+#        "Error" to standard output.
+#
+#   Parameters:
+#     filename - Absolute path to a file that contains some text
+#                Typical: '/tmp/output.txt' or '/home/student/log.txt'
+#
+#   Output Example: (standard output)
+#     'triple digit'
+#
+function q7()
+{
+    #Valid variables are: 
+    filename=$1
+    #Place your code here
 
-
-
-
-
-
-
+    contents=$(cat $filename)
+    if [[ "$contents" -lt 10 ]];then
+        echo "single digit"
+    elif [[ "$contents" -ge 10 ]] && [[ "$contents" -le 99 ]];then
+        echo "double digit"
+    elif [[ "$contents" -ge 100 ]] && [[ "$contents" -le 999 ]];then
+        echo "triple digit"
+    else 
+        echo "Error"
+    fi
+    return 1
+}
+#endif //SUPPRESS_Q7--DO NOT MODIFY
 
 
 ==================================================================================================================================================================
@@ -314,18 +347,37 @@ function q9()
 
 
 #----------------------------------------------------------------------[	QUESTION 10	]--------------------------------------------------------------------#
-
-
-
-
-
-
-
-
-
-
-
-
+#ifdef SUPPRESS_Q10--DO NOT MODIFY
+# q10
+#   Create a script that will perform the following actions:
+#     1. Given a directory specified by "dirpath" create a sorted list of all 
+#        files in the directory that were modified within the previous day.
+#     2. Ensure that the full path to each file is used for the sort and is
+#        included in the output.
+#     3. The list should include all files in the specified directory and
+#        any subdirectories.
+#     4. Do not include any directories in your output.
+#     5. Print this list to the screen, one item per line.
+#
+#   Parameters:
+#     dirpath - The directory to search for files modified in the previous day.
+#               Typical: '/home/student/' or '/tmp' or '/var/logs'
+#
+#   Output Example: (standard output)
+#     /home/student/file1.txt
+#     /home/student/file2.txt
+#     /home/student/logs/log.txt
+#     /home/student/output.txt
+#
+function q10()
+{
+    #Valid variables are: 
+    dirpath=$1
+    #Place your code here
+    find $1 -type f -mtime 0 | sort
+    return 1
+}
+#endif //SUPPRESS_Q10--DO NOT MODIFY
 ==================================================================================================================================================================
 
 
