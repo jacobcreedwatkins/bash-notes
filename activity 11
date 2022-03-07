@@ -2,9 +2,14 @@ https://stackoverflow.com/questions/22727107/how-to-find-the-last-field-using-cu
 
 
 
-#------------------[  SCRIPT  ]------------------#
+#------------------[	GUNNY's ANSWER		]---------------------#
+
+find / -type f -iname "*.bin" 2>/dev/null | awk -F/ '{OFS="/"}{$NF="";print $0}' | sort -u
 
 
-find / -name *.bin 2> /dev/null | awk 'BEGIN{FS=OFS="."}{NF--; print}' | sort -u
+
 
 ===================================================================================================================================
+
+
+
