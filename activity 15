@@ -1,0 +1,58 @@
+#---------------------------[	ACTIVITY 15	]------------------------------#
+
+
+Write a script which finds and hashes the contents 3 levels deep from each of these directories:	/bin	/etc	/var
+
+
+
+
+Have your script exclude named pipes.  These can break your script.
+
+
+Have your script redirect STDOUT and STDERR to a separate files.
+
+
+Your script should determine the count of files hashed in the file with hashes.
+
+
+Determine the count of unsuccessfully-hashed directories.
+
+
+Have both counts output to the screen with an appropriate title for each count.
+
+
+
+
+#-------------------------[		GUNNY's ANSWER	]-------------------------#
+
+
+
+#!/bin/bash
+
+
+#Variable for directories
+
+DIRS='/bin /etc /var'
+
+#find foo
+
+find $DIRS -maxdepth 3 ! -type p -exec md5sum {} \; 2> /home/student/scripts/activity_15/errors.del > /home/student/scripts/activity_15/good.del
+# 'max depth 3' Only search 3 directories deep
+#  '! -type p' Don't look for named pipes
+#  '-exec md5sum {} \;' md5sum of everything returned from find comand
+
+echo "Successfully Hashed Files: $(cat /home/student/scripts/activity_15/good.del | wc -l)"
+
+echo "Unsuccessfully Hashed Directories: $(cat /home/student/scripts/activity_15/errors.del | wc -l)"
+
+#Clean up // Best Practices
+rm *.del
+
+
+
+
+
+
+
+
+
