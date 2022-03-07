@@ -5,9 +5,9 @@
 
 
 
-comparing strings using LETTERS
+comparing numbers using LETTERS
 
-comparing variables use NUMBERS
+comparing letters use NUMBERS
 
 ===================================================================
 #!/bin/bash
@@ -107,11 +107,73 @@ do
 	echo "$i"
 	(( i++))
 	if [[ $i -gt 1337 ]]; then break; fi; done; echo "Who's a l337 H@ck3rm4n now?!"
+	
+	
+	
+	
+=======================================================
 
 
 
+for i in {0..10}
+do
+if [[ $i -eq 9]];then
+	continue
+fi
+
+echo $i
+((i++))
+done
 
 
+
+=======================================================================
+
+
+echo "While loop output:"
+counter=1
+while [[ $counter -le 10 ]]
+do
+	echo $counter
+	((counter++))
+done
+
+
+~~~~~~~~~~
+
+echo "until loop output:"
+counter=1
+until [[ $counter -gt 10]]
+do
+	echo $counter
+	((counter++))
+done
+
+
+
+==========================================
+
+
+while read line
+do
+echo $line
+done < myfile.del
+
+==============================================================
+cat myfile.del | while read lione
+do echo $line
+done
+
+==================================================
+
+
+LOOPS SUMMARY
+
+for - do - done 			##perform a set of commands for each item in a list
+while - done				##perform a set of commands while a test is true
+until - do - done			##perform a set of commands until a test is true
+break						##exit the current loop
+continue					##stop current iteratio of the loop and begin the next iteration
 
 
 
