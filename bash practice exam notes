@@ -1,1 +1,341 @@
 
+#-------------------------------------------------------------------------[		INSTRUCTIONS	]-------------------------------------------------------------------#
+
+
+
+Valid parameter/argument variables are specified at the beginning of each question. 
+Place your code to accomplish the given task where specified.
+Grade your code using the command line: 'make'
+You may grade a single question using 'make q1', 'make q2', etc.
+You may force printing of standard output and error during grading by 
+  including 'return 1' at the end of your function.
+Removing 'return 1' or changing this line to 'return 0' will suppress printing
+  standard output and error.
+
+
+
+=================================================================================================================================================================
+
+
+#-------------------------------------------------------------------------[	QUESTION 1	]-------------------------------------------------------------------#
+
+#ifdef SUPPRESS_Q1--DO NOT MODIFY
+# q1
+#   Create a script that will perform the following actions:
+#     1. All replacements are case-sensitive.
+#     2. The input file is specified by the variable 'filename'.
+#     3. Write the output to the file specifed by the variable 'outputfile'.
+#     4. Replace every instance of 'cat' in the input file with 'dog'.
+#     5. Replace every instance of 'Navy' in the input file with 'Army'.
+#
+#   Parameters:
+#     filename - The absolute path to a file the student should read.  
+#                Typical: '/home/student/input'
+#     outputfile - The absolute path to the file where output should be written.
+#                Typical: '/home/student/output'
+#
+#   Output Example:
+#     None. Filesystem will indicate change.
+#
+function q1()
+{
+    #Valid variables are: 
+    filename=$1
+    outputfile=$2
+    #Place your code here
+    sed 's/cat/dog/g;s/Navy/Army/g' $1 > $2
+    return 1
+}
+#endif //SUPPRESS_Q1--DO NOT MODIFY
+===========================================================================================================================================================
+
+
+
+
+
+#-------------------------------------------------------------------------[	QUESTION 2	]-------------------------------------------------------------------#
+
+
+
+#ifdef SUPPRESS_Q2--DO NOT MODIFY
+# q2
+#   Create a script that will perform the following actions:
+#     1. Print to standard output all user names from the /etc/passwd file.
+#
+#   Parameters:
+#     None 
+#
+#   Output Example:
+#     root
+#     student
+#     cups
+#     ...
+#     etc
+#
+function q2()
+{
+    #Valid variables are: 
+    #None
+    #Place your code here
+    cat /etc/passwd | awk -F: '{print $1}' 
+    return 1
+}
+#endif //SUPPRESS_Q2--DO NOT MODIFY
+
+==========================================================================================================================================================
+
+
+
+
+
+#-------------------------------------------------------------------------[	QUESTION 3	]-------------------------------------------------------------------#
+
+
+#ifdef SUPPRESS_Q3--DO NOT MODIFY
+# q3
+#   Create a script that will perform the following actions:
+#     1. Print to standard output all user names from the file path specified 
+#        by the parameter 'filename' sorted ascending numerical by user id.
+#     2. Print only the user name.
+#
+#   Parameters:
+#     filename - A passwd file that will be in the format of /etc/passwd 
+#                Typical: /etc/passwd
+#
+#   Output Example:
+#     root
+#     student
+#     cups
+#     ...
+#     etc
+#
+function q3()
+{
+    #Valid variables are: 
+    filename=$1
+    #Place your code here
+    sort -t: -nk3 $1 | awk -F: '{print $1}'
+    return 1
+}
+#endif //SUPPRESS_Q3--DO NOT MODIFY
+==========================================================================================================================================================
+
+
+
+#--------------------------------------------------------------------[	QUESTION 4	]--------------------------------------------------------------------#
+
+
+
+#ifdef SUPPRESS_Q4--DO NOT MODIFY
+# q4
+#   Create a script that will perform the following actions:
+#     1. Print to standard output the total number of files in the directory
+#        specified by the parameter named 'dirname'.
+#   
+2. If the directory does not exist, print 'Invalid Directory'
+#     3. The number to count includes hidden files but excludes the '.' and '..'
+#        pseudo-directories.
+#
+#   Parameters:
+#     dirname - The absolute path to a directory
+#               Typical: '/var/log' or '/home/student/logs'
+#
+#   Output Example: (standard output)
+#     '42'
+#     or
+#     'Invalid Directory'
+#
+function q4()
+{
+    #Valid variables are: 
+    dirname=$1
+    #Place your code here
+    if test -d ${1}
+    then
+        ls -A $1 | wc -l
+    else
+        echo "Invalid Directory"
+    fi
+    return 1
+}
+#endif //SUPPRESS_Q4--DO NOT MODIFY
+
+===============================================================================================================================================================
+
+
+
+#---------------------------------------------------------------------------[	QUESTION 5	]------------------------------------------------------------------#
+
+
+
+#ifdef SUPPRESS_Q5--DO NOT MODIFY
+# q5
+#   Create a script that will perform the following actions:
+#     1. Delete all files contained in the directory specified by "dirdel"
+#     2. Also delete the directory specified by "dirdel"
+#
+#   Parameters:
+#     dirdel - Absolute path to a directory 
+#              Typical: '/tmp/logs' or '/var/logs/iptables'
+#
+#   Output Example:
+#     None. Filesystem must indicate the change.
+#
+function q5()
+{
+    #Valid variables are: 
+    dirdel=$1
+    #Place your code here
+    rm -rf $1
+    return 1
+}
+#endif //SUPPRESS_Q5--DO NOT MODIFY
+==================================================================================================================================================================
+
+
+
+
+
+#---------------------------------------------------------------------[	QUESTION 6	]-----------------------------------------------------------------------#
+
+
+#ifdef SUPPRESS_Q6--DO NOT MODIFY
+# q6
+#   Create a script that will perform the following actions:
+#     1. Create a file specified by the name 'newfile'.
+#     2. Set the modified date of the file to the string specified by the 
+#        parameter 'filedate'.
+#     3. Set the modified time of the file to 1730.
+#
+#   Parameters:
+#     newfile - Absolute path to a file that does not exist
+#               Typical: '/tmp/watchdog.lock' or '/home/student/lastupdate.txt'
+#     filedate - The modification date to use.
+#               Typical: '20200614' or '19760704'
+#
+#   Output Example:
+#     None. The filesystem must indicate the change.
+#
+function q6()
+{
+    #Valid variables are: 
+    newfile=$1
+    filedate=$2
+    #Place your code here
+    touch -t $21730 $1
+    return 1
+}
+#endif //SUPPRESS_Q6--DO NOT MODIFY
+==================================================================================================================================================================
+
+
+
+
+#-------------------------------------------------------------------------[	QUESTION 7	]---------------------------------------------------------------------#
+
+
+
+
+
+
+
+
+
+
+
+==================================================================================================================================================================
+
+
+#----------------------------------------------------------------------------[	QUESTION 8	]--------------------------------------------------------------#
+
+#ifdef SUPPRESS_Q8--DO NOT MODIFY
+# q8
+#   Create a script that will perform the following actions:
+#     1. Copy all lines from the file specified by "src" to the file specified 
+#        by "dst" which *do not* contain the text specified by 'match'.
+#
+#   Parameters:
+#     src   - Absolute path to a file that exists and contains multiple lines of text.
+#             Typical: '/tmp/source.txt'
+#     dst   - Absolute path to a file that does not exist
+#             Typical: '/tmp/destination.txt'
+#     match - A text string that will exist on some lines in parameter "src"
+#             Typical: 'error' or 'warning' or 'pickle'
+#
+#   Output Example:
+#     None. Filesystem will indicate change.
+#
+function q8()
+{
+    #Valid variables are: 
+    src=$1
+    dst=$2
+    match=$3
+    #Place your code here
+    grep -v $3 $1 > $2
+    return 1
+}
+#endif //SUPPRESS_Q8--DO NOT MODIFY
+==================================================================================================================================================================
+
+
+
+
+#----------------------------------------------------------------------[	QUESTION 9	]--------------------------------------------------------------------#
+
+
+#ifdef SUPPRESS_Q9--DO NOT MODIFY
+# q9
+#   Create a script that will perform the following actions:
+#     1. Terminate the process that has the name specified by 'procname'. 
+#     2. The name of the process in 'procname' varies and will change each 
+#        time the application is run
+#
+#   Parameters:
+#     procname - The filename (without path) of a binary file that is currently running.
+#           Typical: 'infinite.sh' or 'running.sh'
+#
+#   Output Example:
+#     None. A stopped process will indicate change.
+#
+function q9()
+{
+    #Valid variables are: 
+    procname=$1
+    #Place your code here
+    pkill $1
+    return 1
+}
+#endif //SUPPRESS_Q9--DO NOT MODIFY
+==================================================================================================================================================================
+
+
+
+
+
+#----------------------------------------------------------------------[	QUESTION 10	]--------------------------------------------------------------------#
+
+
+
+
+
+
+
+
+
+
+
+
+==================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
