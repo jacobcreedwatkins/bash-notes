@@ -377,6 +377,12 @@ function q10()
     find $1 -type f -mtime 0 | sort
     return 1
 }
+
+
+# find -mtime -1          option declares to find at modify time from the last 24 hours (-1)
+
+
+
 #endif //SUPPRESS_Q10--DO NOT MODIFY
 ==================================================================================================================================================================
 
