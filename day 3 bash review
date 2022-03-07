@@ -1,5 +1,71 @@
 #------------[  DAY 3 REVIEW]------------#
 
+	major concepts:
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		-	variables
+		-	command substitution
+		-	builtin variables
+		-	functions
+		-	variables substitution
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+functions example syntax:
+	
+		~~~~~~~~~~~~~~~~~~~~~~~
+		function funky() {
+		>	command
+		>	command
+		>	command
+		
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~
+		
+		
+		
+		
+command substitution example syntax:
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	var=$(command)
+	
+	echo $var
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+variables & parameters
+		
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Special Parameters
+
+			BASH includes several special parameters that you can use in your scripts.
+
+
+				$*			The positional parameters, starting from one.
+
+				$@			The positional parameters, starting from one.
+
+				$#			The number of positional parameters.
+
+				$?			The exit status of the previous command.
+
+				$-			The current option flags of the shell.
+
+				$$			The process ID of the shell.
+
+				$!			The process ID of the most recent background job.
+
+				$0			set to the name of the script.
+
+				$_			First command in a script, is the path/name of the script as invoked. 
+							Otherwise, it is the last parameter passed to the most recent command.
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		
+
+
+
 
 
 
