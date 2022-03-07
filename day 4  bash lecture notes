@@ -5,6 +5,113 @@
 
 
 
+comparing strings using LETTERS
+
+comparing variables use NUMBERS
+
+===================================================================
+#!/bin/bash
+
+
+#List of items
+
+
+for name in Marky Ricky Johnny Bryant James Terry Mickey Davy Timmy Joey ; do
+    echo $name
+done
+
+#!/bin/bash
+
+
+===============================================================
+
+
+names='Stan Kyle Cartman'
+for name in $names ; do
+    echo $name
+done
+
+
+===================================================================
+
+
+
+#!/bin/bash
+
+#for loop counting up in a range 
+
+for value in {1..5} ; do echo $value ; done
+#!/bin/bash
+#for loop counting down through a range 
+
+
+for value in {10..1} ; do
+    echo $value
+    sleep 1
+done 
+
+echo "Blast off!"
+#!/bin/bash
+
+
+
+=====================================================
+#loop with counter
+
+for ((x=0 ; x<=5 ; x++))
+
+
+do
+    echo "\$x equals to $x"
+
+
+done 
+
+#!/bin/bash
+
+
+
+
+===========================================
+# for loop counter using variables
+
+
+
+start=1
+stop=5
+for ((i=start; i<=stop; i++))
+
+
+do
+    echo $i
+
+done
+#!/bin/bash 
+================================================
+
+#infinite for loop with a break
+
+
+
+for ((i=0 ;  ; i++))
+do
+	echo "$i"
+done
+
+
+=============================================
+
+
+for (( ; ; ))
+do
+	echo "$i"
+	(( i++))
+	if [[ $i -gt 1337 ]]; then break; fi; done; echo "Who's a l337 H@ck3rm4n now?!"
+
+
+
+
+
 
 
 
