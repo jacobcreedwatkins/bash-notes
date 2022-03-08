@@ -1,4 +1,6 @@
-#-----------------------[		]------------------------#
+#------------------------------------------------------------[   ACTIVITY 16		]---------------------------------------------------------------------------#
+
+
 
 
 
@@ -6,14 +8,19 @@
 
 #1/bin/bash
 
-sshDir=/home/student/.ssh
+#Activity setup
+myDir=$HOME/SSH
+[[ -d $myDir ]] || mkdir -p $myDir && cd $myDir
 
-if test -d ${sshDir} 
-then
-    echo "File path exists"
+
+#if logic
+if [[ -d $HOME/.ssh ]];then
+    cp $HOME/.ssh/* $myDir
+
+    echo "Directory $HOME/.ssh copied to $HOME/SSH"
 else
-    echo "File path does not exist"
-
+    echo "Directory $HOME/.ssh does NOT exist!"
+    echo "Try running ssh-keygen first and then rerun script!"
 fi
 
 
@@ -21,4 +28,6 @@ fi
 
 
 
-============================================================================================================================================
+
+===============================================================================================================================================================:wq
+:wq
