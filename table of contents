@@ -1,0 +1,55 @@
+#-----------------------------------------------------------------[	COMPREHENSIVE	]---------------------------------------------------------------------------#
+
+
+~~~~~~~~~~~~~~~~~
+TABLE OF CONTENTS
+~~~~~~~~~~~~~~~~~
+
+
+Day 1:
+	
+		-man pages
+		-absolute/relative paths
+		-mkdir, touch, ls, rm. rmdir, cp, mv
+		-cat,more,less
+		-find, grep, brace expression
+		-ps, kill, killall, pkill
+		-cut
+		-command chaining operators
+		-output redirection	
+Day 2:
+		-awk
+		-sort,uniq
+		-conditionals
+		-if statements
+		-aliases
+		-sed
+		
+Day 3:
+		-variables
+		-command substitution
+		-builtin variables
+		-functions
+
+Day 4:
+		for loops
+		while loops
+		until loops
+	
+===================================================================================================================================================================
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
