@@ -1,10 +1,32 @@
 #-----------------------[		]------------------------#
 
 
+#create a termporary file (tmp.del) for all files found
+
+
+find /etc /bin /sbin /root ! -type d -printf '%m %p\n' 2>/dev/null | sort -nr > tmp.del
+
+
+
+#Trims temporary file for different permissions unuquely into another file (perms.del)
+awk '{print $1}' tmp.del | uniq | > perms.del
+
+
+#for loop
+for perms in $cat perms.del)
+do
+	if [[ $perms -lt 641 ]];then
+		egrep "^$perms" tmp.del >> less.del
+	else
+		egrep "^$perms" tmp.del >> more.del
+	fi
+done
 
 
 
 
+LCount=$(cat less.del | wc -l)
+HCount=$(cat more.del | wc -l)
 
 
 
